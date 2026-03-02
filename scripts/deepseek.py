@@ -33,7 +33,7 @@ from tqdm import tqdm
 class Config:
     """Configuración centralizada del procesamiento"""
     # API Configuration
-    API_KEY: str = "sk-6bfa772c92ad4e33b3b4d00e7af81e1a"  # Reemplazar con tu API key
+    API_KEY: str = "sk-aaaaaaaaaaaaaaaaaaaaaaaaaa"  # Reemplazar con tu API key
     API_URL: str = "https://api.deepseek.com/v1/chat/completions"
     MODEL: str = "deepseek-chat"  # o "deepseek-reasoner" para modo pensamiento
     
@@ -724,7 +724,7 @@ async def main():
     
     # Configuración
     config = Config(
-        API_KEY="sk-6bfa772c92ad4e33b3b4d00e7af81e1a",  # <--- REEMPLAZAR CON TU API KEY
+        API_KEY="sk-aaaaaaaaaaaaaaaaaaaaaaaaaa",  # <--- REEMPLAZAR CON TU API KEY
         BATCH_SIZE=500,  # Ajustable según resultados de pruebas
         MAX_CONCURRENT_BATCHES=5  # Ajustable según capacidad
     )

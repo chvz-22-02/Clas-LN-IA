@@ -24,7 +24,7 @@ from pathlib import Path
 # ─────────────────────────────────────────────
 # CONFIG — ajusta estos valores a tu proyecto
 # ─────────────────────────────────────────────
-ANTHROPIC_API_KEY   = "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"#os.environ.get("ANTHROPIC_API_KEY", "TU_API_KEY_AQUI")
+ANTHROPIC_API_KEY   = os.environ.get("ANTHROPIC_API_KEY", "TU_API_KEY_AQUI")
 
 FRASES_CSV          = "../data/inputs/frases.txt"          # Archivo con las frases a clasificar (una por línea o CSV)
 SISTEMA_CSV         = "../data/inputs/sistema.txt"         # Archivo con la jerarquía Tema→Subtema→Categoría→Tabla
