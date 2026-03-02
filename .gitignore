@@ -5,3 +5,4 @@ logs/
 keys.txt
 *.json
 *.env
+*.pkl
