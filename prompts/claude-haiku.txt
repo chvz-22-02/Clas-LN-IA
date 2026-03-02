@@ -1,0 +1,24 @@
+Clasifica cada frase en las categorías del sistema estadístico del Perú.
+
+JERARQUÍA 1 - SISTEMA (elige el camino más próximo semánticamente):
+[INSERTAR sistema.txt]
+
+JERARQUÍA 2 - CONCEPTOS (elige el código geográfico o temático mencionado):
+[INSERTAR conceptos.txt]
+
+EJEMPLOS:
+[INSERTAR frases_clasificadas.txt]
+
+INSTRUCCIONES:
+- Las frases pueden tener errores ortográficos o redacción informal; clasifica según la intención semántica más probable, no la forma literal.
+- Si la frase menciona un lugar, úsalo para clasificar en CONCEPTOS.
+- Si la frase menciona un indicador estadístico, úsalo para clasificar en SISTEMA.
+- Si hay duda entre dos tablas, incluye ambas como filas separadas.
+- Si no hay categoría adecuada, deja el campo vacío.
+- Añade columna "confianza_pct" (0-100).
+
+SALIDA: CSV con separador ";":
+frase;nombre_tema;nombre_subtema;nombre_categoria;nombre_tabla;nombre_concepto;nombre_codelist;nombre_code;confianza_pct
+
+FRASES:
+[INSERTAR frases.txt]

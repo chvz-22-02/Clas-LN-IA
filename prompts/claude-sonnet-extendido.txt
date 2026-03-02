@@ -1,0 +1,17 @@
+Clasifica semánticamente las siguientes frases en el sistema de categorías estadísticas del Perú.
+
+Tienes dos jerarquías independientes:
+- SISTEMA: Tema → Subtema → Categoría → Tabla  
+- CONCEPTOS: Concepto → Codelist → Code
+
+Para cada frase: considera que puede contener errores ortográficos, abreviaciones o redacción informal. Interpreta primero su intención semántica más probable, luego analiza qué indicador estadístico describe, qué ámbito geográfico menciona o implica, y cuál es la tabla más específica que podría contenerla. Si hay ambigüedad genuina entre dos tablas o dos códigos geográficos, clasifícala en ambos.
+
+[INSERTAR sistema.txt]
+[INSERTAR conceptos.txt]
+[INSERTAR frases_clasificadas.txt como ejemplos]
+
+Frases a clasificar:
+[INSERTAR frases.txt]
+
+Salida: CSV con separador ";":
+frase;nombre_tema;nombre_subtema;nombre_categoria;nombre_tabla;nombre_concepto;nombre_codelist;nombre_code;confianza_pct

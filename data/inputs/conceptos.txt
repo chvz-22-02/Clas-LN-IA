@@ -1,0 +1,11 @@
+﻿nombre_concepto;desc_concepto;nombre_codelist;desc_codelist;nombre_code
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;NACIONAL;A nivel del país. Solo para tablas que no tienen otra división geográfica. ;NACIONAL
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;ÁREA DE RESIDENCIA;Agrupa según el entorno: urbano o rural.;TOTAL
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;DEPARTAMENTO;División a nivel departamental, incluyendo las principales subdivisiones para Lima.;AYACUCHO
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;DEPARTAMENTO;División a nivel departamental, incluyendo las principales subdivisiones para Lima.;CAJAMARCA
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;DEPARTAMENTO;División a nivel departamental, incluyendo las principales subdivisiones para Lima.;JUNÍN
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;DEPARTAMENTO;División a nivel departamental, incluyendo las principales subdivisiones para Lima.;LA LIBERTAD
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;CIUDADES;Agrupa las ciudades principales del Perú.;PIURA
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;CIUDADES;Agrupa las ciudades principales del Perú.;PUCALLPA
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;ZONA REGISTRAL;Agrupa las zonas registrales de SUNARP;OFICINA REGISTRAL DE HUACHO (HUAURA Y OYÓN)
+ÁMBITO GEOGRÁFICO;Diversas divisiones del ámbito geográfico del Perú;ZONA REGISTRAL;Agrupa las zonas registrales de SUNARP;OFICINA REGISTRAL DE HUARAL (HUARAL)

@@ -1,0 +1,59 @@
+# TAREA: CLASIFICACIÓN SEMÁNTICA JERÁRQUICA DE FRASES EN MÚLTIPLES DIMENSIONES - MODO RAZONAMIENTO PROFUNDO
+
+## OBJETIVO
+Clasificar cada frase en DOS sistemas jerárquicos...
+
+[El mismo contenido del prompt anterior hasta la sección de instrucciones]
+
+## ACTIVAR MODO RAZONAMIENTO PROFUNDO MULTI-DIMENSIONAL
+
+Para CADA frase, DEBES realizar un razonamiento explícito paso a paso antes de generar el CSV. Estructura tu pensamiento así:
+
+### FRASE: [texto de la frase]
+
+**PASO 1: Limpieza y normalización**
+- Eliminar caracteres especiales (""", comillas sobrantes)
+- Corregir errores ortográficos obvios (ej: "bictimas" → "víctimas")
+- Normalizar formato de años y fechas
+
+**PASO 2: Identificar el indicador principal (sistema.txt)**
+- ¿Cuál es la variable medida? (buscar sustantivos clave: tasa, producción, población, temperatura, etc.)
+- Buscar en sistema.txt: [listar 2-3 candidatos de tablas que podrían coincidir]
+- Justificar elección: [razón basada en semántica, no solo palabras clave]
+- Confianza temática preliminar: [%]
+
+**PASO 3: Identificar TODAS las dimensiones de desagregación**
+- Listar cada posible dimensión encontrada en la frase:
+  1. [Dimensión A] → Evidencia en frase: [texto exacto que la menciona]
+  2. [Dimensión B] → Evidencia en frase: [texto exacto que la menciona]
+  ...
+- Considerar dimensiones implícitas (ej: "porcentaje" implícitamente es MEDIDA)
+
+**PASO 4: Para CADA dimensión identificada**
+- Buscar en conceptos.txt:
+  * Concepto candidato: [nombre del concepto]
+  * Codelist candidato: [nombre del codelist]
+  * Code candidato: [nombre del código]
+- Evaluar tipo de coincidencia:
+  * Exacta: el término aparece textual en los códigos
+  * Parcial: el término es sinónimo o variante
+  * Por contexto: se infiere del significado
+  * Aproximada: rango que no coincide exactamente
+- Asignar confianza: [%] (100% para exacta, 80-90% para parcial, 60-80% para contextual, 50-70% para aproximada)
+
+**PASO 5: Determinar número de filas a generar**
+- [N] dimensiones identificadas = [N] filas (todas con mismo sistema.txt)
+- Justificar si alguna dimensión debe priorizarse o si hay ambigüedad
+- Verificar que no haya duplicación de dimensiones
+
+**PASO 6: Generar resultado**
+Para cada dimensión, una fila CSV con su confianza específica
+
+**PASO 7: VALIDACIÓN FINAL**
+- ¿La tabla seleccionada en sistema.txt es la más específica disponible?
+- ¿Se capturaron todas las dimensiones relevantes?
+- ¿Las confianzas son consistentes con el análisis?
+
+### RESULTADO EN CSV:
+
+[SOLO EL CSV, UNA FILA POR DIMENSIÓN, SIN TEXTO ADICIONAL]
