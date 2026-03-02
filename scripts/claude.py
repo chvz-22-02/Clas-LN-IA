@@ -19,12 +19,14 @@ import json
 import pandas as pd
 import anthropic
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv(dotenv_path="../.env")
 
 # ─────────────────────────────────────────────
 # CONFIG — ajusta estos valores a tu proyecto
 # ─────────────────────────────────────────────
-ANTHROPIC_API_KEY   = os.environ.get("ANTHROPIC_API_KEY", "TU_API_KEY_AQUI")
+ANTHROPIC_API_KEY   = os.environ.get("ANTHROPIC_API_KEY")
 
 FRASES_CSV          = "../data/inputs/frases.txt"          # Archivo con las frases a clasificar (una por línea o CSV)
 SISTEMA_CSV         = "../data/inputs/sistema.txt"         # Archivo con la jerarquía Tema→Subtema→Categoría→Tabla

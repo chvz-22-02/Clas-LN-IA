@@ -26,6 +26,9 @@ from tenacity import (
 )
 import aiofiles
 from tqdm import tqdm
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path="../.env")
 
 # ==================== CONFIGURACIÓN ====================
 
@@ -33,7 +36,7 @@ from tqdm import tqdm
 class Config:
     """Configuración centralizada del procesamiento"""
     # API Configuration
-    API_KEY: str = "sk-aaaaaaaaaaaaaaaaaaaaaaaaaa"  # Reemplazar con tu API key
+    API_KEY: str = os.environ.get("DS_API_KEY")  # Reemplazar con tu API key
     API_URL: str = "https://api.deepseek.com/v1/chat/completions"
     MODEL: str = "deepseek-chat"  # o "deepseek-reasoner" para modo pensamiento
     
@@ -724,15 +727,15 @@ async def main():
     
     # Configuración
     config = Config(
-        API_KEY="sk-aaaaaaaaaaaaaaaaaaaaaaaaaa",  # <--- REEMPLAZAR CON TU API KEY
+        API_KEY=os.environ.get("DS_API_KEY"),  # <--- REEMPLAZAR CON TU API KEY
         BATCH_SIZE=500,  # Ajustable según resultados de pruebas
         MAX_CONCURRENT_BATCHES=5  # Ajustable según capacidad
     )
     
     # Verificar que la API key está configurada
     if not config.API_KEY:
-        print("ERROR: No se encontró DEEPSEEK_API_KEY en variables de entorno")
-        print("Crea un archivo .env con: DEEPSEEK_API_KEY=tu-api-key-aqui")
+        print("ERROR: No se encontró DS_API_KEY en variables de entorno")
+        print("Crea un archivo .env con: DS_API_KEY=tu-api-key-aqui")
         print("O obtén tu API key en: https://platform.deepseek.com/")
         return
     

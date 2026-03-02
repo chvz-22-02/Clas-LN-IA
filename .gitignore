@@ -3,3 +3,5 @@ logs/
 
 #Keys
 keys.txt
+*.json
+*.env
